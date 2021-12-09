@@ -1,0 +1,44 @@
+<header [class.active]="isActive" [class.bg-black]="sticky$ | async" class="fixed top-0 left-0 z-50 w-full py-6">
+  <div class="container">
+    <nav class="flex items-center justify-between">
+      <!-- logo -->
+      <a href="#">
+        <img class="" src="/assets/images/logo.svg" alt="Loop studios" />
+      </a>
+      <!-- end logo -->
+
+      <!-- links desktop -->
+      <ul class="items-center hidden gap-10 desktop:flex text-inverted">
+        <li><a class="link" href="#">About</a></li>
+        <li><a class="link" href="#">Careers</a></li>
+        <li><a class="link" href="#">Events</a></li>
+        <li><a class="link" href="#">Products</a></li>
+        <li><a class="link" href="#">Support</a></li>
+      </ul>
+      <!-- end links desktop -->
+
+      <!-- menu -->
+      <div class="cursor-pointer desktop:hidden" (click)="isActive = !isActive">
+        <!-- menu -->
+        <img *ngIf="!isActive" src="/assets/images/icon-hamburger.svg" alt="Menu" />
+        <!-- end menu -->
+
+        <!-- icon close -->
+        <img *ngIf="isActive" src="/assets/images/icon-close.svg" alt="Close" />
+        <!-- end icon close -->
+      </div>
+      <!-- end menu -->
+    </nav>
+
+    <!-- links mobile only display when user click to hamburger button-->
+    <ul @slideIn *ngIf="isActive"
+      class="grid gap-6 text-3xl font-medium tracking-widest mt-36 text-inverted tablet:mt-40 tablet:gap-10 tablet:text-4xl">
+      <li><a class="hover:font-black" href="#">ABOUT</a></li>
+      <li><a class="hover:font-black" href="#">CAREERS</a></li>
+      <li><a class="hover:font-black" href="#">EVENTS</a></li>
+      <li><a class="hover:font-black" href="#">PRODUCTS</a></li>
+      <li><a class="hover:font-black" href="#">SUPPORT</a></li>
+    </ul>
+    <!-- end links mobile only display when user click to hamburger button-->
+  </div>
+</header>

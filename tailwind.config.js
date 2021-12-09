@@ -23,7 +23,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
+        DEFAULT: "2rem",
         sm: "2rem",
         lg: "4rem",
         xl: "5rem",
@@ -37,8 +37,8 @@ module.exports = {
       },
       // create custom fonts here
       fontFamily: {
-        heading: "'LoraRegular', 'serif'",
-        mono: ["'DMMonoRegular'", ...defaultTheme.fontFamily.mono],
+        subheading: "'Alata', 'serif'",
+        mono: ["'Josefin Sans'", ...defaultTheme.fontFamily.mono],
       },
       // create custom text colors here
       textColor: {
