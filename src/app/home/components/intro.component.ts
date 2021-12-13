@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 
       <div class="container ">
         <div
-          class="absolute -translate-y-1/2  top-1/2 text-inverted  text-4xl p-6 border-2 border-white desktop:pr-20"
+          class="absolute -translate-y-1/2  top-1/2 text-inverted  text-4xl p-6 border-2 border-white desktop:pr-20 lg:text-6xl"
         >
           <h1>
             IMMERSIVE <br />
